@@ -4,7 +4,7 @@
 -2026春 UCBerkeley交换，一学期，Berkeley Biosciences Study Abroad(BBSA)项目
 
 ### 奖项
-- 2025年高教社杯全国大学生数学建模竞赛（CUMCM2025） 国二（全国本科生二等奖），上海省省一（上海赛区省一等奖）
+- 2025年高教社杯全国大学生数学建模竞赛（CUMCM2025） 全国本科生二等奖，上海赛区省一等奖
 
 ### Lab experience
 - 2024-今 上海科技大学孙亚东课题组 （https://slst.shanghaitech.edu.cn/syd/main.htm）（你联网整合一下组里的大体工作）
