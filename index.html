@@ -106,8 +106,14 @@
       top: 0;
       z-index: 100;
       background: #fff;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-x: contain;
     }
     .nav a {
+      flex: 0 0 auto;
       padding: 0.55rem 1.1rem;
       font-size: 0.9rem;
       font-weight: 500;
@@ -371,7 +377,7 @@
     <div class="entry">
       <div class="entry-date"></div>
       <div class="entry-body">
-        <div class="title">chi_square</div>
+        <div class="title">Chi_Square</div>
         <p>
           A comprehensive Python chi-square calculator covering the majority of statistical
           computation problems encountered in genetics courses, including goodness-of-fit tests,
@@ -387,14 +393,15 @@
   <section id="coursework">
     <h2>Selected Coursework</h2>
     <div class="course-grid">
-      <div class="course-item"><span>Linear Algebra I</span><span class="grade">A</span></div>
-      <div class="course-item"><span>Introduction to Information Science &amp; Technology</span><span class="grade">A+</span></div>
+
       <div class="course-item"><span>Biochemistry I</span><span class="grade">A</span></div>
-      <div class="course-item"><span>Fundamentals of Organic Chemistry</span><span class="grade">A</span></div>
+      <div class="course-item"><span>Genetics</span><span class="grade">A</span></div>
       <div class="course-item"><span>Introduction to Systems Biology</span><span class="grade">A+</span></div>
       <div class="course-item"><span>Light Microscopy</span><span class="grade">A+</span></div>
       <div class="course-item"><span>Brain Organoids</span><span class="grade">A</span></div>
-      <div class="course-item"><span>Genetics</span><span class="grade">A</span></div>
+      <div class="course-item"><span>Fundamentals of Organic Chemistry</span><span class="grade">A</span></div>
+      <div class="course-item"><span>Introduction to Information Science &amp; Technology</span><span class="grade">A+</span></div>
+      <div class="course-item"><span>Linear Algebra I</span><span class="grade">A</span></div>
     </div>
   </section>
 
