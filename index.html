@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xiangyu Wang – Resume</title>
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #f5f6fa;
+      color: #2d2d2d;
+      line-height: 1.7;
+    }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      color: #fff;
+      padding: 3rem 1.5rem 2.5rem;
+      text-align: center;
+    }
+    header h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: 0.02em; }
+    header .subtitle {
+      margin-top: 0.4rem;
+      font-size: 1.05rem;
+      opacity: 0.85;
+    }
+    header .links {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      font-size: 0.95rem;
+    }
+    header .links a { color: #bfdbfe; }
+    header .links a:hover { color: #fff; }
+
+    /* ── Section ── */
+    section { margin-top: 2.2rem; }
+    section h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #1e3a5f;
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 0.35rem;
+      margin-bottom: 1.1rem;
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1.1rem 1.3rem;
+      margin-bottom: 0.9rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+    .card-header .title { font-weight: 600; font-size: 1.02rem; }
+    .card-header .meta  { font-size: 0.88rem; color: #6b7280; white-space: nowrap; }
+    .card .sub-title { font-size: 0.93rem; color: #374151; margin-top: 0.15rem; }
+    .card p { margin-top: 0.6rem; font-size: 0.93rem; color: #4b5563; }
+    .card ul {
+      margin-top: 0.6rem;
+      padding-left: 1.2rem;
+      font-size: 0.93rem;
+      color: #4b5563;
+    }
+    .card ul li { margin-bottom: 0.3rem; }
+
+    /* ── Award badge ── */
+    .badge {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fcd34d;
+      border-radius: 4px;
+      padding: 0.1rem 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+    }
+
+    /* ── Course grid ── */
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 0.6rem;
+    }
+    .course-item {
+      background: #fff;
+      border-radius: 6px;
+      padding: 0.55rem 0.9rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    .course-item .grade {
+      font-weight: 700;
+      color: #2563eb;
+      margin-left: 0.5rem;
+      white-space: nowrap;
+    }
+
+    /* ── Skills ── */
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .skill-tag {
+      background: #e0e7ff;
+      color: #3730a3;
+      border-radius: 20px;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      font-size: 0.82rem;
+      color: #9ca3af;
+    }
+
+    @media (max-width: 560px) {
+      header h1 { font-size: 1.8rem; }
+      .card-header { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header>
+  <h1>Xiangyu Wang</h1>
+  <div class="subtitle">Undergraduate · Life Sciences · ShanghaiTech University</div>
+  <nav class="links">
+    <a href="https://github.com/xiangyuw1" target="_blank">GitHub: xiangyuw1</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- ═══════════════ EDUCATION ═══════════════ -->
+  <section id="education">
+    <h2>Education</h2>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="title">ShanghaiTech University</span>
+        <span class="meta">2023 – 2027 (expected)</span>
+      </div>
+      <div class="sub-title">B.S. in Biological Sciences · School of Life Science and Technology (SLST)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="title">University of California, Berkeley</span>
+        <span class="meta">Spring 2026</span>
+      </div>
+      <div class="sub-title">Exchange Student · Berkeley Biosciences Study Abroad (BBSA) Program</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ AWARDS ═══════════════ -->
+  <section id="awards">
+    <h2>Awards &amp; Honors</h2>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="title">
+          National Undergraduate Mathematical Modeling Contest (CUMCM 2025)
+          <span class="badge">🥈 National 2nd Prize</span>
+        </span>
+        <span class="meta">2025</span>
+      </div>
+      <p>
+        National Second Prize (2nd Prize among undergraduate teams nationwide) and
+        Shanghai Regional First Prize (1st Prize in the Shanghai division).
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════ RESEARCH / LAB EXPERIENCE ═══════════════ -->
+  <section id="research">
+    <h2>Research &amp; Lab Experience</h2>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="title">Sun Yadong Lab, ShanghaiTech University (SLST)</span>
+        <span class="meta">2024 – Present</span>
+      </div>
+      <p>
+        Undergraduate researcher in the
+        <a href="https://slst.shanghaitech.edu.cn/syd/main.htm" target="_blank">Sun Yadong Lab</a>,
+        which investigates fundamental questions in cell biology and molecular biology,
+        with a focus on cellular mechanisms and the regulatory networks underlying
+        biological processes.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="title">FlyCropper – Drosophila Wing Classification System</span>
+        <span class="meta">Genetics Lab Independent Project</span>
+      </div>
+      <p>
+        One of the primary code contributors for an independent experimental project in the
+        Genetics laboratory course. The system uses a two-stage deep-learning pipeline
+        (object detection + classification) to automatically detect Drosophila and classify
+        wing phenotypes (long / short wing).
+      </p>
+      <p><a href="https://github.com/xiangyuw1/FlyCropper" target="_blank">github.com/xiangyuw1/FlyCropper</a></p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="title">Evaluating the Inhibitory Effects of mTORC1 Inhibitors on Various Cancer Cell Lines</span>
+        <span class="meta">Cell Biology Lab Independent Project</span>
+      </div>
+      <p>
+        Responsible for the design and execution of the biochemistry experimental component
+        of this independent project in the Cell Biology laboratory course, investigating the
+        inhibitory effects of mTORC1 inhibitors on multiple cancer cell lines.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SELECTED COURSEWORK ═══════════════ -->
+  <section id="coursework">
+    <h2>Selected Coursework</h2>
+    <div class="course-grid">
+      <div class="course-item">
+        <span>Linear Algebra I</span>
+        <span class="grade">A</span>
+      </div>
+      <div class="course-item">
+        <span>Introduction to Information Science &amp; Technology</span>
+        <span class="grade">A+</span>
+      </div>
+      <div class="course-item">
+        <span>Biochemistry I</span>
+        <span class="grade">A</span>
+      </div>
+      <div class="course-item">
+        <span>Fundamentals of Organic Chemistry</span>
+        <span class="grade">A</span>
+      </div>
+      <div class="course-item">
+        <span>Introduction to Systems Biology</span>
+        <span class="grade">A+</span>
+      </div>
+      <div class="course-item">
+        <span>Light Microscopy</span>
+        <span class="grade">A+</span>
+      </div>
+      <div class="course-item">
+        <span>Brain Organoids</span>
+        <span class="grade">A</span>
+      </div>
+      <div class="course-item">
+        <span>Genetics</span>
+        <span class="grade">A</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PROJECTS ═══════════════ -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="title">chi_square</span>
+      </div>
+      <p>
+        A comprehensive Python chi-square calculator covering the majority of statistical
+        computation problems encountered in genetics courses, including goodness-of-fit tests,
+        contingency table tests (with optional Yates' correction), and Hardy–Weinberg
+        equilibrium tests. Inspired by and originally initiated by
+        <a href="https://github.com/SiyuanMa42/" target="_blank">github.com/SiyuanMa42</a>.
+      </p>
+      <p><a href="https://github.com/xiangyuw1/chi_square" target="_blank">github.com/xiangyuw1/chi_square</a></p>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SKILLS ═══════════════ -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <div class="skill-list">
+        <span class="skill-tag">Molecular Biology (wet lab)</span>
+        <span class="skill-tag">Biochemistry (wet lab)</span>
+        <span class="skill-tag">Vibe Coding</span>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /.container -->
+
+<footer>
+  &copy; 2026 Xiangyu Wang &nbsp;·&nbsp;
+  Built with GitHub Pages
+</footer>
+
+</body>
+</html>
