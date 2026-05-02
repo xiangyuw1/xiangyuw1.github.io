@@ -445,6 +445,9 @@
       links.forEach((link) => {
         const isActive = link.getAttribute('href') === '#' + targetId;
         link.classList.toggle('active', isActive);
+        if (isActive) {
+          link.scrollIntoView({ inline: 'center', block: 'nearest' });
+        }
       });
     }
 
