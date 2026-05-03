@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 16px; scroll-behavior: smooth; }
+    html { font-size: 16px; scroll-behavior: smooth; overflow-anchor: none; }
     body {
       font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
       background: #fff;
@@ -438,6 +438,9 @@
 </div>
 
 <script>
+  if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+  window.scrollTo(0, 0);
+
   (function () {
     const nav = document.querySelector('.nav');
     if (!nav) return;
@@ -456,7 +459,10 @@
         const isActive = link.getAttribute('href') === '#' + targetId;
         link.classList.toggle('active', isActive);
         if (isActive) {
-          link.scrollIntoView({ inline: 'center', block: 'nearest' });
+          const linkRect = link.getBoundingClientRect();
+          const navRect = nav.getBoundingClientRect();
+          const offset = linkRect.left - navRect.left - (navRect.width - linkRect.width) / 2;
+          nav.scrollBy({ left: offset, behavior: 'smooth' });
         }
       });
     }
