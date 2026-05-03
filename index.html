@@ -126,22 +126,21 @@
       overflow-x: auto;
       overflow-y: hidden;
       white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-      overscroll-behavior-x: contain;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
     }
+    .nav::-webkit-scrollbar { display: none; }
     .nav a {
       flex: 0 0 auto;
       padding: 0.55rem 1.1rem;
       font-size: 0.9rem;
       font-weight: 500;
       color: #666;
-      border-bottom: 2px solid transparent;
-      margin-bottom: -1px;
-      transition: color 0.15s, border-color 0.15s;
+      transition: color 0.15s;
     }
     .nav a:hover, .nav a.active {
       color: #111;
-      border-bottom-color: #111;
+      border-bottom: 2px solid #111;
       text-decoration: none;
     }
 
@@ -448,7 +447,11 @@
       .map((link) => document.querySelector(link.getAttribute('href')))
       .filter(Boolean);
 
+    let activeId = null;
+
     function setActive(targetId) {
+      if (targetId === activeId) return;
+      activeId = targetId;
       links.forEach((link) => {
         const isActive = link.getAttribute('href') === '#' + targetId;
         link.classList.toggle('active', isActive);
