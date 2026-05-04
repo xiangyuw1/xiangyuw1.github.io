@@ -39,3 +39,12 @@ Content lives in the HTML `<section>` elements. Section IDs (`education`, `award
 - Color palette: neutral grays (`#111`, `#333`, `#555`, `#888`, `#e5e7eb`) with accent blue (`#1a6faa`)
 - Max content width: 900px (`.page` class)
 - Mobile breakpoint: 600px
+
+## Mobile nav gotchas (learned the hard way)
+
+The sticky nav bar is horizontally scrollable on mobile. These details matter:
+
+- **Hide the scrollbar** — `overflow-x: auto` alone shows a gray scrollbar line. Must add `scrollbar-width: none`, `-ms-overflow-style: none`, and `.nav::-webkit-scrollbar { display: none; }`.
+- **Never use `scrollIntoView` on nav links** — it affects the page scroll, not just the nav. Use `nav.scrollBy()` with manually computed offset instead.
+- **Disable scroll restoration** — mobile browsers restore previous scroll position on reload, hiding the top of the page. Add `history.scrollRestoration = 'manual'` and `window.scrollTo(0, 0)` at the top of the script.
+- **`overflow-anchor: none` on `html`** — prevents font-loading layout shifts from triggering browser scroll anchoring (which auto-scrolls the page away from the top).
