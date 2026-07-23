@@ -45,9 +45,9 @@
     }
     .profile-photo {
       flex-shrink: 0;
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
+      width: 240px;
+      height: auto;
+      border-radius: 5%;
       background: #e5e7eb;
       overflow: hidden;
       display: flex;
@@ -57,6 +57,7 @@
       color: #9ca3af;
       border: 3px solid #f3f4f6;
     }
+    .profile-photo .badge-base { max-width: 100%; margin: 0 auto; }
     .profile-photo img { width: 100%; height: 100%; object-fit: cover; }
     .profile-info { flex: 1; }
     .profile-info h1 {
@@ -260,6 +261,7 @@
       .nav a { padding: 0.5rem 0.7rem; }
     }
   </style>
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </head>
 <body>
 
@@ -267,7 +269,9 @@
   <div class="lang-link-wrap"><a href="/">EN</a>&nbsp;/&nbsp;<span class="active">中文</span></div>
 
   <div class="profile">
-    <div class="profile-photo">🧬</div>
+    <div class="profile-photo">
+      <div class="badge-base LI-profile-badge" data-locale="zh_CN" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="xiangyu-wang-382741404" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://cn.linkedin.com/in/xiangyu-wang-382741404?trk=profile-badge"></a></div>
+    </div>
     <div class="profile-info">
       <h1>王翔宇</h1>
       <div class="affil">本科生 · 生命科学与技术学院 · 上海科技大学</div>
